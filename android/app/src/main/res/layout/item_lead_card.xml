@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Badge + Time Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Premium"
+                android:textSize="11sp"
+                app:chipMinHeight="32dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvTimeAgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2h ago"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Masked Name -->
+        <TextView
+            android:id="@+id/tvMaskedName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R** S****"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- City • Category -->
+        <TextView
+            android:id="@+id/tvCityCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mumbai • Love"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Notes preview -->
+        <TextView
+            android:id="@+id/tvNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking for guidance on..."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Quality Score + Price Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/progressQuality"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:max="100"
+                android:progress="85"
+                android:progressTint="@color/purple_primary" />
+
+            <TextView
+                android:id="@+id/tvQualityScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85"
+                android:textSize="12sp"
+                android:textColor="@color/purple_primary"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹99"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange_cta" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- View Details Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="View Details"
+            android:backgroundTint="@color/purple_primary" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

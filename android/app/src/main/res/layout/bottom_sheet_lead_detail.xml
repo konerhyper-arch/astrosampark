@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvDialogName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tvDialogPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#6C3CE1"
+        android:layout_marginBottom="4dp"
+        android:text="+91 XXXXX XXXXX" />
+
+    <TextView
+        android:id="@+id/tvDialogCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="24dp"
+        android:text="City • Category" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogCall"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="📞 Call"
+            android:backgroundTint="#6C3CE1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogWhatsApp"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="💬 WhatsApp"
+            android:backgroundTint="#25D366" />
+    </LinearLayout>
+</LinearLayout>

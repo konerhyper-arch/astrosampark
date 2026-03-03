@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_primary"
+        app:title="Lead Details"
+        app:titleTextColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Preview Layout -->
+            <LinearLayout
+                android:id="@+id/layoutPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="Premium" />
+
+                        <TextView
+                            android:id="@+id/tvMaskedName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp"
+                            android:text="R** S****" />
+
+                        <TextView
+                            android:id="@+id/tvCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/purple_primary"
+                            android:layout_marginBottom="4dp"
+                            android:text="Love" />
+
+                        <TextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="8dp"
+                            android:text="Mumbai" />
+
+                        <TextView
+                            android:id="@+id/tvQualityScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Quality: 85/100" />
+
+                        <TextView
+                            android:id="@+id/tvNotesSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="16dp"
+                            android:text="Notes preview..." />
+
+                        <TextView
+                            android:id="@+id/tvWalletBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="16dp"
+                            android:text="Wallet Balance: ₹500" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBuyNow"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:text="Buy Now ₹99"
+                            android:textSize="16sp"
+                            android:backgroundTint="@color/orange_cta" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Purchased Layout -->
+            <LinearLayout
+                android:id="@+id/layoutPurchased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Lead Purchased!"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/status_converted"
+                            android:layout_marginBottom="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvRevealedName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            android:text="Name" />
+
+                        <TextView
+                            android:id="@+id/tvRevealedPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="4dp"
+                            android:text="+91 XXXXX XXXXX" />
+
+                        <TextView
+                            android:id="@+id/tvRevealedEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="16dp"
+                            android:text="email@example.com" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCall"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:text="📞 Call"
+                                app:icon="@null"
+                                android:backgroundTint="@color/purple_primary" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnWhatsApp"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:text="💬 WhatsApp"
+                                android:backgroundTint="#25D366" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvNewBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:text="New Balance: ₹400" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Status Update -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Update Status"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Rate Lead -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rate This Lead"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="1.0" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Refund -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRefund"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Request Refund"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:strokeColor="@color/error_color"
+                    android:textColor="@color/error_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
