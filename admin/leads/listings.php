@@ -28,7 +28,7 @@ $qs = http_build_query(array_filter([
     'category' => $filterCategory,
 ]));
 
-$resp        = apiCall('GET', '/admin/leads/list?' . $qs);
+$resp        = apiCall('GET', '/admin/leads?' . $qs);
 $allListings = $resp['data']['leads']      ?? [];
 $pagination  = $resp['data']['pagination'] ?? $pagination;
 
@@ -324,7 +324,7 @@ async function submitCreateListing() {
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Creating...';
 
     try {
-        const resp = await adminFetch('/admin/leads/listing_create', {
+        const resp = await adminFetch('/admin/leads/listing', {
             method: 'POST',
             body: JSON.stringify({ lead_id: leadId, price, visibility: vis, min_rating_required: minRating }),
         });
@@ -348,9 +348,9 @@ async function submitCreateListing() {
 async function deactivateLead(leadId) {
     if (!confirm(`Mark lead #${leadId} as expired?`)) return;
     try {
-        const resp = await adminFetch('/leads/update_status', {
+        const resp = await adminFetch(`/leads/${leadId}/status`, {
             method: 'POST',
-            body: JSON.stringify({ lead_id: leadId, status: 'expired' }),
+            body: JSON.stringify({ status: 'expired' }),
         });
         if (resp.success) {
             showNotice(`Lead #${leadId} marked as expired.`);

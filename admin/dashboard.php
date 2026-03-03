@@ -12,7 +12,7 @@ $topAstro   = $analytics['data']['top_astrologers']  ?? [];
 $leadDist   = $analytics['data']['lead_status_dist'] ?? [];
 
 // ── Pending count badge in sidebar ───────────────────────────────
-$pendingResp = apiCall('GET', '/admin/leads/list?status=pending&per_page=1');
+$pendingResp = apiCall('GET', '/admin/leads?status=pending&per_page=1');
 $_SESSION['pending_count'] = (int) ($pendingResp['data']['pagination']['total'] ?? 0);
 
 // ── Build chart data ─────────────────────────────────────────────
@@ -21,7 +21,7 @@ $chartSales   = array_column($daily, 'sales');
 $chartRevenue = array_column($daily, 'revenue');
 
 // ── Recent sales (reuse top astrologers endpoint for now) ────────
-$recentSales = apiCall('GET', '/admin/leads/list?status=sold&per_page=10');
+$recentSales = apiCall('GET', '/admin/leads?status=sold&per_page=10');
 $recentLeads = $recentSales['data']['leads'] ?? [];
 
 $pageTitle  = 'Dashboard';

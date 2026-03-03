@@ -16,7 +16,7 @@ $qs = http_build_query(array_filter([
     'source'   => $filterSource,
 ]));
 
-$resp       = apiCall('GET', '/admin/leads/list?' . $qs);
+$resp       = apiCall('GET', '/admin/leads?' . $qs);
 $leads      = $resp['data']['leads']      ?? [];
 $pagination = $resp['data']['pagination'] ?? [];
 
@@ -369,7 +369,7 @@ async function submitListing() {
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Creating...';
 
     try {
-        const resp = await adminFetch('/admin/leads/listing_create', {
+        const resp = await adminFetch('/admin/leads/listing', {
             method: 'POST',
             body: JSON.stringify({ lead_id: leadId, price, visibility: vis, min_rating_required: minRating }),
         });

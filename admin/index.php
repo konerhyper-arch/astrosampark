@@ -36,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ch = curl_init($apiBase . '/auth/login');
             curl_setopt_array($ch, [
                 CURLOPT_POST           => true,
-                CURLOPT_POSTFIELDS     => json_encode(['phone' => $login, 'email' => $login, 'password' => $password]),
+                // Backend checks phone OR email column, so send as 'phone' (covers both login types)
+                CURLOPT_POSTFIELDS     => json_encode(['phone' => $login, 'password' => $password]),
                 CURLOPT_HTTPHEADER     => ['Content-Type: application/json', 'Accept: application/json'],
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_TIMEOUT        => 10,

@@ -249,7 +249,7 @@ async function triggerMetaSync() {
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
 
     try {
-        const resp = await adminFetch('/meta_webhook.php', {
+        const resp = await adminFetch('/webhook/meta', {
             method: 'POST',
             body: JSON.stringify({ token, form_id: formId, _test: true }),
         });
