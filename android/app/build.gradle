@@ -39,16 +39,6 @@ android {
         viewBinding true
         buildConfig true
     }
-
-    defaultConfig {
-        applicationId "com.astrosampark.leads"
-        minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "API_BASE_URL", '"http://10.0.2.2/api/"'
-    }
 }
 
 dependencies {

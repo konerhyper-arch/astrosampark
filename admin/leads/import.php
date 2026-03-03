@@ -215,7 +215,7 @@ require_once __DIR__ . '/../partials/header.php';
 
                 <div class="mt-4">
                     <h6 class="fw-semibold small text-muted">VERIFY TOKEN (set in Meta App)</h6>
-                    <code class="d-block p-2 bg-light rounded">astrosampark_meta_webhook_verify</code>
+                    <code class="d-block p-2 bg-light rounded">astrosampark_meta_token</code>
                 </div>
             </div>
             <!-- /Meta tab -->
