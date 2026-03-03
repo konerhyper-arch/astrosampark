@@ -36,6 +36,7 @@ while (($row = fgetcsv($handle)) !== false) {
         continue;
     }
     if (count($row) !== count($headers)) {
+        $errors[] = "Row skipped (column count mismatch, expected " . count($headers) . ", got " . count($row) . "): " . implode(',', $row);
         $skipped++;
         continue;
     }

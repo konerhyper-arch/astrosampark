@@ -72,7 +72,8 @@ try {
 
     // Idempotency: reject duplicate payment_ids
     $stmtCheck = $pdo->prepare(
-        "SELECT id FROM wallet_transactions WHERE ref_type = :ref_type LIMIT 1"
+        "SELECT id FROM wallet_transactions
+         WHERE ref_type = :ref_type AND type = 'credit' LIMIT 1"
     );
     $stmtCheck->execute([':ref_type' => 'razorpay:' . $paymentId]);
     if ($stmtCheck->fetch()) {

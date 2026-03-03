@@ -79,7 +79,8 @@ if ($method === 'POST') {
                 ':payload' => json_encode($value),
             ]);
             if ($stmtRaw->rowCount() === 0) {
-                // Already processed
+                // Already processed; log and skip
+                error_log("meta_webhook: duplicate lead_id_meta=$metaLeadId – skipped");
                 continue;
             }
 

@@ -12,9 +12,7 @@ class Auth
     {
         $secret = getenv('JWT_SECRET');
         if (!$secret) {
-            // Fail loudly in production; provide a safe default only for dev.
-            error_log('WARNING: JWT_SECRET env var is not set.');
-            $secret = 'change_me_in_production_jwt_secret_32chars';
+            throw new \RuntimeException('JWT_SECRET environment variable is not set. Refusing to generate insecure tokens.');
         }
         return $secret;
     }

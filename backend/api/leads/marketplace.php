@@ -109,9 +109,9 @@ foreach ($rows as $row) {
     $age      = $now - strtotime($row['created_at']);
     $time_ago = match (true) {
         $age < 60     => 'just now',
-        $age < 3600   => floor($age / 60) . ' min ago',
-        $age < 86400  => floor($age / 3600) . ' hr ago',
-        default       => floor($age / 86400) . ' day(s) ago',
+        $age < 3600   => ($m = (int) floor($age / 60))   . ' ' . ($m === 1 ? 'min' : 'mins') . ' ago',
+        $age < 86400  => ($h = (int) floor($age / 3600)) . ' ' . ($h === 1 ? 'hr'  : 'hrs')  . ' ago',
+        default       => ($d = (int) floor($age / 86400)) . ' ' . ($d === 1 ? 'day' : 'days') . ' ago',
     };
 
     $data[] = [

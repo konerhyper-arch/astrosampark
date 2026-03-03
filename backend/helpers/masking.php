@@ -7,7 +7,7 @@ class Masking
     {
         $parts = explode(' ', trim($name));
         return implode(' ', array_map(static function (string $part): string {
-            if (strlen($part) <= 1) return $part . '***';
+            if (strlen($part) <= 1) return $part . '*';
             return $part[0] . str_repeat('*', max(3, strlen($part) - 1));
         }, $parts));
     }
