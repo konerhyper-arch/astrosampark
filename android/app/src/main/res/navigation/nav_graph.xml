@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marketplaceFragment">
+
+    <fragment
+        android:id="@+id/marketplaceFragment"
+        android:name="com.astrosampark.leads.ui.marketplace.MarketplaceFragment"
+        android:label="Marketplace" />
+
+    <fragment
+        android:id="@+id/myLeadsFragment"
+        android:name="com.astrosampark.leads.ui.myleads.MyLeadsFragment"
+        android:label="My Leads" />
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.astrosampark.leads.ui.wallet.WalletFragment"
+        android:label="Wallet" />
+
+    <activity
+        android:id="@+id/leadDetailActivity"
+        android:name="com.astrosampark.leads.ui.leaddetail.LeadDetailActivity"
+        android:label="Lead Details" />
+
+</navigation>

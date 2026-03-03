@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="purple_primary">#6C3CE1</color>
+    <color name="purple_dark">#4A2BA0</color>
+    <color name="purple_light">#9B6EF5</color>
+    <color name="orange_cta">#FF6B35</color>
+    <color name="orange_dark">#E55A24</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Badge colors -->
+    <color name="badge_premium_bg">#FFF8E1</color>
+    <color name="badge_premium_text">#F57F17</color>
+    <color name="badge_verified_bg">#E8F5E9</color>
+    <color name="badge_verified_text">#2E7D32</color>
+    <color name="badge_basic_bg">#F5F5F5</color>
+    <color name="badge_basic_text">#616161</color>
+
+    <!-- Status colors -->
+    <color name="status_new">#1976D2</color>
+    <color name="status_contacted">#F57C00</color>
+    <color name="status_converted">#2E7D32</color>
+    <color name="status_not_interested">#C62828</color>
+
+    <!-- Transaction colors -->
+    <color name="amount_credit">#2E7D32</color>
+    <color name="amount_debit">#C62828</color>
+
+    <!-- Misc -->
+    <color name="error_color">#B00020</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="shimmer_base">#E0E0E0</color>
+    <color name="shimmer_highlight">#F5F5F5</color>
+</resources>
